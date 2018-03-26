@@ -49,7 +49,7 @@ class Navbar extends Component {
         className: null,
         userStatus: null,
     };
-
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -61,6 +61,9 @@ class Navbar extends Component {
     componentDidMount() {
         this.noticeUpdateHandler = App.notice.onNoticeUpdate(notice => {
             this.setState({noticeBadge: notice.total});
+        });
+        navbarItems.map((v) => {
+            console.log(' ----- ====== ------ {} ', v);
         });
     }
 
@@ -97,7 +100,7 @@ class Navbar extends Component {
             })}
             {...other}
         >
-            <nav className={`dock-${isAvatarOnTop ? 'top' : 'bottom'} app-nav-profile`}>
+            <nav className={`dock-${isAvatarOnTop ? 'top' : 'bottom'} app-nav-profile`} >
                 <div className="hint--right" data-hint={App.profile.summaryText}>
                     <a className="block relative app-profile-avatar" onClick={this.handleProfileAvatarClick}>
                         <UserAvatar className="avatar-lg relative" style={{margin: HTML.rem((navbarWidth - 36) / 2)}} size={36} user={App.profile.user} />
@@ -109,7 +112,8 @@ class Navbar extends Component {
             <nav className="dock-top app-nav-main">
                 {
                     navbarItems.map(item => {
-                        return (<div key={item.to} className="hint--right nav-item" data-hint={item.label}>
+                        console.log(" ----- ====== ------ 1111 ", item);
+                        return (<div key={item.to} className="hint--right nav-item" data-hint={item.label} >
                             <NavLink item={item} />
                             {
                                 (this.state.noticeBadge && item.to === ROUTES.chats.recents.__) ? <div className="label label-sm dock-right dock-top circle red badge">{this.state.noticeBadge}</div> : null

@@ -1,6 +1,7 @@
 .app-chats-menu-header {
   z-index: 1040;
   padding: @space-sm;
+  background-color: lightgreen;
 }
 
 .app-chats-search {
@@ -37,6 +38,7 @@
 
 .app-chats-menu-list {
   top: (50*@rem);
+  background-color: lightskyblue;
 
   .item {
     height: (40*@rem);
@@ -51,7 +53,8 @@
       background-color: #fff;
 
       &:after {
-        background-color: transparent;
+        //background-color: transparent;
+        background-color: lightpink;
       }
     }
 
@@ -560,8 +563,11 @@
 }
 
 .app-chat-history {
+  background-color: tomato;
+
   .chat-title {
     > .avatar {margin-right: @space-xs}
+    background-color: orangered;
   }
 
   .app-message-item.active {
@@ -615,7 +621,8 @@
 
 .app-chat-group-list {
   > .app-member-me {
-    background-color: rgba(0,0,0,.05);
+    //background-color: rgba(0,0,0,.05);
+    background-color: lightsalmon;
     box-shadow: 0 @rem 0 rgba(0,0,0,.1);
     overflow: hidden;
 
@@ -632,6 +639,8 @@
       .flex-middle;
     }
   }
+
+  background-color: gold;
 
   .app-group-list {
     margin-left: 0;

@@ -19,9 +19,18 @@
   .transition-normal(left, top, right, bottom, transform, box-shadow);
 }
 
-.dock-top    {bottom: auto;}
-.dock-bottom {top: auto;}
-.dock-left   {right: auto}
+.dock-top {
+  bottom: auto;
+  background-color: red;
+}
+.dock-bottom {
+  top: auto;
+  background-color: cyan;
+}
+.dock-left   {
+  right: auto;
+  background-color: yellow;
+}
 .dock-right  {left: auto}
 
 .affix.dock-top    {.shadow-divider();}

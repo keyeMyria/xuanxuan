@@ -42,7 +42,8 @@ class Index extends Component {
 
         return (<div className={HTML.classes('app-main', className)} {...other}>
             <GlobalMessage className="dock-top" />
-            <Navbar userStatus={userStatus} className="dock-left primary shadow-2" />
+            {/*<Navbar userStatus={userStatus} className="dock-left primary shadow-2" />*/}
+            <Navbar userStatus={userStatus} className="dock-left" />
             <Route path={ROUTES.apps.__} exact component={CacheContainer} />
             <Route
                 path="/:app?"

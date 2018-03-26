@@ -135,7 +135,9 @@ body {
   background-color: #2d2d2d;
 }
 .app-chats-cache {
-  background-color: #444;
+  /*background-color: #444;*/
+  background-color: palegreen;
+
 }
 .app-chat-sidebar .tabs > .nav {
   background-color: #2d2d2d;
